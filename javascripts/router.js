@@ -1,8 +1,10 @@
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
-    handleLocation();
+    if (window.location.href != event.target.href) {
+        window.history.pushState({}, "", event.target.href);
+        handleLocation();
+    }
 };
 
 const handleLocation = async () => {
