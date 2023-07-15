@@ -6,15 +6,67 @@
         <title>TREADED</title>
         <link href="./assets/css/main.css" rel="stylesheet" />
     </head>
-    <body>
-        <div id="root">
-            <header id="header">
-                <a href="/" onclick="route()">Home</a>
-                <a href="/cart" onclick="route()">Cart</a>
-            </header>
-            <main id="main"></main>
-            <footer id="footer"></footer>
-        </div>
+    <body class="flex flex-col h-screen">
+        <header class="sticky top-0 h-[70px] px-3 bg-white">
+            <div
+                class="m-auto max-w-[1440px] h-full flex justify-between items-center"
+            >
+                <ul class="uppercase flex gap-6 text-[14px]">
+                    <li class="font-medium">
+                        <a href="/">Women</a>
+                    </li>
+                    <li class="font-light"><a href="/">Plus</a></li>
+                    <li class="font-light"><a href="/">Men</a></li>
+                    <li class="font-light"><a href="/">Accessories</a></li>
+                </ul>
+                <img src="./assets/svg/Logo.svg" alt="My Happy SVG" />
+                <div class="flex gap-5 items-center">
+                    <a href="/"
+                        ><img
+                            class="cursor-pointer"
+                            src="./assets/svg/bx_bx-user.svg"
+                    /></a>
+                    <a href="/">
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/bx_bx-shopping-bag.svg"
+                        />
+                    </a>
+                    <a href="/">
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/bx_bx-heart.svg"
+                        />
+                    </a>
+                    <a href="/">
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/bx_bx-support.svg"
+                        />
+                    </a>
+                    <a href="/">
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/bx_bx-search.svg"
+                        />
+                    </a>
+
+                    <div class="flex space-x-2 border rounded-full px-1.5 py-1">
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/us_flag.svg"
+                        />
+                        <div class="uppercase">usd $</div>
+                        <img
+                            class="cursor-pointer"
+                            src="./assets/svg/ant-design_down-outlined.svg"
+                        />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="w-full flex-1"></main>
+        <footer>footer</footer>
         <script src="./router/index.js"></script>
     </body>
 </html>
