@@ -5,16 +5,19 @@ const route = (event) => {
 };
 
 const routes = {
-    "/": "/pages/index.html",
+    "/": "/pages/home.html",
     "/cart": "pages/cart.html",
     404: "pages/404.html",
 };
 
-const handleLocation = async (event) => {
+const handleLocation = async () => {
     const path = window.location.pathname;
     const route = routes[path] || routes[404];
     const html = await fetch(route).then((data) => data.text());
     document.getElementById("main").innerHTML = html;
 };
 
+window.onpopstate = handleLocation;
 window.route = route;
+
+handleLocation();
