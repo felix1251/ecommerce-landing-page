@@ -4,14 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TREADED</title>
+        <link href="./assets/css/main.css" rel="stylesheet" />
     </head>
     <body>
-        <header id="header">
-            <a href="/" onclick="route()">Home</a>
-            <a href="/cart" onclick="route()">Cart</a>
-        </header>
-        <main id="main"></main>
-        <footer id="footer"></footer>
-        <script src="javascript/router"></script>
+        <div id="root">
+            <header id="header">
+                <a href="/" onclick="route()">Home</a>
+                <a href="/cart" onclick="route()">Cart</a>
+            </header>
+            <main id="main"></main>
+            <footer id="footer"></footer>
+        </div>
+        <script src="./router.js"></script>
     </body>
 </html>

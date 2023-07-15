@@ -1,14 +1,15 @@
-var http = require("http");
-var fs = require("fs");
+// only serves as local server to display the app
 
-const PORT = 8080;
+const express = require("express");
+const path = require("path");
 
-fs.readFile("./index.html", function (err, html) {
-    if (err) throw err;
+const app = express();
+const port = process.env.PORT || 8080;
 
-    http.createServer(function (request, response) {
-        response.writeHeader(200, { "Content-Type": "text/html" });
-        response.write(html);
-        response.end();
-    }).listen(PORT);
+app.use(express.static(__dirname + "/"));
+app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/index.html"));
 });
+
+app.listen(port);
+console.log("Server started at http://localhost:" + port);
