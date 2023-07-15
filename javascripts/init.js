@@ -1,9 +1,3 @@
-function htmlToElement(html) {
-    var t = document.createElement("template");
-    t.innerHTML = html;
-    return t.content;
-}
-
 const initHeader = async () => {
     const htmlHeader = await fetch(
         componentPath.molecules + "/header.html"
