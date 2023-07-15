@@ -15,5 +15,14 @@ const initFooter = async () => {
     document.getElementById("footer").outerHTML = htmlHeader;
 };
 
+// This function initialized and load footer content via changing the footer component with the id="footer"
+const initPromotions = async () => {
+    const htmlHeader = await fetch(
+        componentPath.molecules + "/promotions.html"
+    ).then((data) => data.text());
+    document.getElementById("promotions").outerHTML = htmlHeader;
+};
+
 initHeader();
+initPromotions();
 initFooter();
