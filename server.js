@@ -1,5 +1,4 @@
 // only serves as local server to display the app
-
 const express = require("express");
 const path = require("path");
 
