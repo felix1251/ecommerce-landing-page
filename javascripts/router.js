@@ -22,7 +22,7 @@ const handleLocation = async () => {
     document.getElementById("main").innerHTML = html;
 };
 
-// handle when back and prev brower buttons are clicked
+// handle when browser back and prev buttons are clicked
 window.onpopstate = handleLocation;
 window.route = route;
 
