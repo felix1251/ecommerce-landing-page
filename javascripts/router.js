@@ -5,12 +5,6 @@ const route = (event) => {
     handleLocation();
 };
 
-const routes = {
-    "/": "./pages/home.html",
-    "/cart": "./pages/cart.html",
-    404: "./pages/404.html",
-};
-
 const handleLocation = async () => {
     const path = window.location.pathname;
     const routePath = routes[path] || routes[404];
