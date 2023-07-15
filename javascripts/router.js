@@ -1,3 +1,7 @@
+/* 1. Use this function to every <a> tag to handle routing
+ * Ex. <a href="/" onclick="route()"></a>.
+ * 2. This will avoid realoding page every link clicked.
+ */
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
@@ -7,6 +11,10 @@ const route = (event) => {
     }
 };
 
+/* 1. Change main tag content every route
+ * 2. This will allow us to navigating page without rendering again the header
+ * and footer components evert
+ */
 const handleLocation = async () => {
     const path = window.location.pathname;
     const routePath = routes[path] || routes[404];
@@ -14,7 +22,9 @@ const handleLocation = async () => {
     document.getElementById("main").innerHTML = html;
 };
 
+// handle when back and prev brower buttons are clicked
 window.onpopstate = handleLocation;
 window.route = route;
 
+// run on first load
 handleLocation();

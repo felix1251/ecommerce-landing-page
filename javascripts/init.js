@@ -1,3 +1,5 @@
+// we componentPath from constants.js
+
 const initHeader = async () => {
     const htmlHeader = await fetch(
         componentPath.molecules + "/header.html"
