@@ -19,7 +19,6 @@ const initBoughtList = async () => {
     recentlyBoughtList
         .map(async (cat, idx) => {
             const productCard = htmlToElement(htmlProduct);
-            productCard.getElementById("product-card");
             productCard.getElementById("product-image").src = cat.img;
             productCard.getElementById("product-title").innerHTML = cat.title;
             if (cat.discount) {

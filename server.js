@@ -5,6 +5,30 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 8080;
 
+app.get("/api/cart", (_, res) => {
+    const carts = [
+        {
+            title: "Hanna Gown",
+            category: "Bronk and Banco",
+            price: "4,883.94 lei",
+            qty: 1,
+            size: "S",
+            color: "Multi Color",
+            img: "./assets/images/categories/night-out.png",
+        },
+        {
+            title: "Astrid Dress",
+            category: "ELLIATT",
+            price: "1,449.60 lei",
+            qty: 1,
+            size: "S",
+            color: "Multi",
+            img: "./assets/images/categories/outwear.png",
+        },
+    ];
+    res.json(carts);
+});
+
 app.use(express.static(__dirname + "/"));
 
 app.get("/*", (_, res) => {
