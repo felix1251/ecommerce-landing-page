@@ -20,6 +20,7 @@ const handleLocation = async () => {
     const routePath = routes[path] || routes[404];
     const html = await fetch(routePath).then((data) => data.text());
     document.getElementById("main").outerHTML = html;
+    window.scrollTo({ top: 0 });
 };
 
 const goTo = (path) => {
