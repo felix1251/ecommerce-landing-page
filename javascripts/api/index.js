@@ -1,13 +1,15 @@
 async function showCartFromApi() {
-    const cartDropdown = document.getElementById("cart-dropdown");
+    const cartDropdownHolder = document.getElementById("cart-dropdown-holder");
+    const cartCheckOutSection = document.getElementById("cart-checkout");
 
-    if (cartDropdown.classList.contains("hidden")) {
-        cartDropdown.classList.remove("hidden");
-        cartDropdown.classList.add("flex");
+    if (cartDropdownHolder.classList.contains("hidden")) {
+        cartDropdownHolder.classList.remove("hidden");
     } else {
-        cartDropdown.classList.add("hidden");
+        cartDropdownHolder.classList.add("hidden");
         return;
     }
+
+    cartCheckOutSection.classList.remove("hidden");
 
     const response = await fetch("/api/cart");
     const carts = await response.json();
@@ -16,16 +18,17 @@ async function showCartFromApi() {
         componentPath.atoms + "/cart_dropdown.html"
     ).then((data) => data.text());
 
+    const cartDropdown = document.getElementById("cart-dropdown-main");
+
     // create new bought list element
     const newCartDropDownEl = document.createElement("div");
-    newCartDropDownEl.setAttribute(
-        "class",
-        "absolute px-4 right-0 z-10 w-80 bg-white border shadow-sm divide-y flex flex-col gap-3"
-    );
-    newCartDropDownEl.setAttribute("id", "cart-dropdown");
+    newCartDropDownEl.setAttribute("class", "divide-y flex-col gap-3 w-full");
+    newCartDropDownEl.setAttribute("id", "cart-dropdown-main");
+    newCartDropDownEl.innerHTML = "";
 
     let prevEl = null;
-    carts.map(async (cart, index) => {
+    let total = 0;
+    await carts.map(async (cart, index) => {
         const newElement = htmlToElement(cartDropdownEl);
         newElement.getElementById("item-image").src = cart.img;
         newElement.getElementById("item-title").innerHTML = cart.title;
@@ -34,14 +37,22 @@ async function showCartFromApi() {
         newElement.getElementById("item-color").innerHTML =
             "Color: " + cart.color;
         newElement.getElementById("item-qty").innerHTML = "Qty: " + cart.qty;
-        newElement.getElementById("item-price").innerHTML = cart.price;
+        newElement.getElementById("item-price").innerHTML = cart.price + " lei";
 
         await newCartDropDownEl.insertBefore(
             newElement,
             prevEl ? newCartDropDownEl.children[prevEl] : null
         );
         prevEl = index;
+        total = total + cart.price;
     });
+
+    document.getElementById(
+        "cart-item-count"
+    ).innerHTML = `My Bag (${carts.length})`;
+    document.getElementById("cart-total-price").innerHTML = `${total.toFixed(
+        2
+    )} lei`;
 
     cartDropdown.replaceWith(newCartDropDownEl);
 }

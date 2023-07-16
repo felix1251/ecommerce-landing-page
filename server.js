@@ -10,7 +10,7 @@ app.get("/api/cart", (_, res) => {
         {
             title: "Hanna Gown",
             category: "Bronk and Banco",
-            price: "4,883.94 lei",
+            price: 4883.94,
             qty: 1,
             size: "S",
             color: "Multi Color",
@@ -19,7 +19,7 @@ app.get("/api/cart", (_, res) => {
         {
             title: "Astrid Dress",
             category: "ELLIATT",
-            price: "1,449.60 lei",
+            price: 1449.69,
             qty: 1,
             size: "S",
             color: "Multi",
