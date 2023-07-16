@@ -18,7 +18,7 @@ const initFooter = async () => {
     document.getElementById("footer").replaceWith(toElement);
 };
 
-// This function initialized and load footer content via changing the footer component with the id="footer"
+// This function initialized and load promotion content via changing the promotion component with the id="promotions"
 const initPromotions = async () => {
     const htmlPromotions = await fetch(
         componentPath.molecules + "/promotions.html"
@@ -28,6 +28,7 @@ const initPromotions = async () => {
     document.getElementById("promotions").replaceWith(toElement);
 };
 
+// load the functions at first start
 initHeader();
 initPromotions();
 initFooter();
