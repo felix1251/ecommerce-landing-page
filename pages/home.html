@@ -1,9 +1,9 @@
 <main id="main" class="w-full">
     <section class="bg-primary">
-        <div class="h-[580px] mx-auto max-w-[1440px] grid grid-cols-2">
+        <div class="h-[580px] mx-auto max-w-[1440px] lg:grid grid-cols-2">
             <img
                 src="../assets/images/women.png"
-                class="object-cover h-full w-full"
+                class="hidden lg:block object-cover h-full w-full"
             />
             <div
                 class="grid place-content-center place-items-center h-full gap-5"
@@ -13,13 +13,15 @@
                     class="h-[390px]"
                 />
                 <button
-                    class="uppercase bg-white px-[30px] py-[10px] text-[30px] font-[600] shadow-lg hover:scale-[1.01]"
+                    class="uppercase bg-white px-[30px] py-[10px] text-xl md:text-[30px] font-[600] shadow-lg hover:scale-[1.01]"
                 >
                     shop now
                 </button>
             </div>
         </div>
-        <div class="h-[150px] bg-white grid grid-cols-6 place-items-center">
+        <div
+            class="py-10 gap-10 bg-white grid md:grid-cols-4 lg:grid-cols-6 place-items-center"
+        >
             <div class="uppercase grid place-items-center place-content-center">
                 <div class="flex gap-3.5 items-center">
                     <div class="text-[32px] font-[600]">$5</div>
@@ -55,7 +57,7 @@
             </button>
         </div>
     </section>
-    <div class="bg-black h-[75px] flex items-center tracking-wide">
+    <div class="hidden lg:flex bg-black h-[75px] items-center tracking-wide">
         <img
             src="../assets/images/black-friday-exclusive.png"
             class="absolute opacity-40"
@@ -82,7 +84,7 @@
             </p>
             <div
                 id="category-container"
-                class="px-2 py-5 grid grid-cols-4 gap-10"
+                class="px-2 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
             >
                 <div class="space-y-2 grid place-items-center">
                     <div
@@ -135,7 +137,7 @@
             </div>
         </div>
     </section>
-    <section class="h-[400px] relative w-full">
+    <section class="hidden lg:block h-[400px] relative w-full">
         <div class="z-30 w-full absolute h-full">
             <div class="mx-auto max-w-[1150px] grid grid-cols-5 gap-10">
                 <div class="flex h-full col-span-3">
@@ -172,14 +174,19 @@
     </section>
     <section class="mx-auto max-w-[1440px] px-3 py-7 flex flex-col gap-8">
         <h1 class="font-[800] text-[36px] text-center">Recently Bought</h1>
-        <div id="recently-bought" class="w-full grid grid-cols-5 gap-10"></div>
+        <div
+            id="recently-bought"
+            class="w-full place-items-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10"
+        ></div>
     </section>
     <section class="bg-secondary px-3 py-14 flex flex-col gap-6">
         <h1 class="font-[800] text-[36px] text-center">Your Next Inspo</h1>
         <p class="text-center text-sm font-light">
             Checkout who’s wearing what by using #THREADEDInspo on Instagram
         </p>
-        <div class="w-full grid grid-cols-5 gap-10 mx-auto max-w-[1400px] mt-4">
+        <div
+            class="w-full place-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mx-auto max-w-[1400px] mt-4"
+        >
             <img
                 class="w-[225px] h-[225px] cursor-pointer hover:shadow-md"
                 src="../assets/images/inspo-1.png"

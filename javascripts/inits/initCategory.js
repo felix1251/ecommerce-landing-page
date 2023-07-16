@@ -11,7 +11,7 @@ const initCategory = async () => {
     const newCategoryContainer = document.createElement("div");
     newCategoryContainer.setAttribute(
         "class",
-        "px-2 py-5 grid grid-cols-4 gap-10"
+        "px-2 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
     );
 
     // Iterate category list to display

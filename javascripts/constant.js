@@ -52,31 +52,31 @@ const categoryList = [
 const recentlyBoughtList = [
     {
         title: "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit",
-        img: "./assets/images/categories/winter-fashion.png",
+        img: "./assets/images/recent-1.png",
         price: "$30",
         discount: "",
     },
     {
-        title: "Chevron Flap Crossbody Bag",
-        img: "./assets/images/categories/winter-fashion.png",
+        title: "Chevron Flap Crossbody Bag Americano Edition",
+        img: "./assets/images/recent-2.png",
         price: "$7.34",
         discount: "$5.77",
     },
     {
         title: "Manilla Tan Multi Plaid Oversized Fringe Scarf",
-        img: "./assets/images/categories/winter-fashion.png",
+        img: "./assets/images/recent-3.png",
         price: "$39",
         discount: "$29",
     },
     {
         title: "Diamante Puff Sleeve Dress - Black",
-        img: "./assets/images/categories/winter-fashion.png",
+        img: "./assets/images/recent-4.png",
         price: "$45.99",
         discount: "",
     },
     {
         title: "Banneth Open Front Formal Dress in Black",
-        img: "./assets/images/categories/winter-fashion.png",
+        img: "./assets/images/recent-5.png",
         price: "$99.95",
         discount: "$69",
     },
