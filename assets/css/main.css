@@ -716,6 +716,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -861,6 +865,10 @@ video {
   height: 1rem;
 }
 
+.h-\[225px\] {
+  height: 225px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -944,6 +952,10 @@ video {
 
 .max-w-\[1450px\] {
   max-width: 1450px;
+}
+
+.max-w-\[1400px\] {
+  max-width: 1400px;
 }
 
 .flex-1 {
@@ -1391,6 +1403,16 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .text-left {
