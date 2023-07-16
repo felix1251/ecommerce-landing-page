@@ -52,4 +52,6 @@ const initBoughtList = async () => {
     boughtListContainer.replaceWith(newBoughtListContainer);
 };
 
-initBoughtList();
+if (window.location.pathname === "/") {
+    initBoughtList();
+}

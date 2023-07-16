@@ -19,8 +19,16 @@ const handleLocation = async () => {
     const path = window.location.pathname;
     const routePath = routes[path] || routes[404];
     const html = await fetch(routePath).then((data) => data.text());
-    const toElement = htmlToElement(html);
-    document.getElementById("main").replaceWith(toElement);
+    document.getElementById("main").outerHTML = html;
+};
+
+const goTo = (path) => {
+    if (window.location.pathname != path) {
+        window.history.pushState({}, "", path);
+        handleLocation();
+    }
+    const cartDropdownHolder = document.getElementById("cart-dropdown-holder");
+    cartDropdownHolder.classList.add("hidden");
 };
 
 // handle when browser back and prev buttons are clicked

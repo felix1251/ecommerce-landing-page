@@ -33,4 +33,6 @@ const initCategory = async () => {
     categoryContainer.replaceWith(newCategoryContainer);
 };
 
-initCategory();
+if (window.location.pathname === "/") {
+    initCategory();
+}
