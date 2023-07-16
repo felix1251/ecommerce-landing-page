@@ -2,7 +2,7 @@
 
 Dependencies
 
-[https://nodejs.org/en/download](Install Node, we use this to run our local server)
+[Install Node, we use this to run our local server](https://nodejs.org/en/download)
 
 Clone Repo
 
