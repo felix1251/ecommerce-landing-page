@@ -33,6 +33,7 @@ const initCategory = async () => {
     categoryContainer.replaceWith(newCategoryContainer);
 };
 
+// initialize the category and only if home route
 if (window.location.pathname === "/") {
     initCategory();
 }

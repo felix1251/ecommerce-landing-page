@@ -52,6 +52,7 @@ const initBoughtList = async () => {
     boughtListContainer.replaceWith(newBoughtListContainer);
 };
 
+// initialize the recent bought items and only if home route
 if (window.location.pathname === "/") {
     initBoughtList();
 }

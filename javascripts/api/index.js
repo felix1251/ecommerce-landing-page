@@ -1,4 +1,5 @@
 async function showCartFromApi() {
+    // access the init elements
     const cartDropdownHolder = document.getElementById("cart-dropdown-holder");
     const cartCheckOutSection = document.getElementById("cart-checkout");
 
@@ -11,6 +12,7 @@ async function showCartFromApi() {
 
     cartCheckOutSection.classList.remove("hidden");
 
+    //fectch the api
     const response = await fetch("/api/cart");
     const carts = await response.json();
 
@@ -26,6 +28,7 @@ async function showCartFromApi() {
     newCartDropDownEl.setAttribute("id", "cart-dropdown-main");
     newCartDropDownEl.innerHTML = "";
 
+    // insert cart card element to to category main component
     let prevEl = null;
     let total = 0;
     await carts.map(async (cart, index) => {
@@ -47,6 +50,7 @@ async function showCartFromApi() {
         total = total + cart.price;
     });
 
+    //update the bag count and total price
     document.getElementById(
         "cart-item-count"
     ).innerHTML = `My Bag (${carts.length})`;
