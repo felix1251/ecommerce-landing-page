@@ -6,7 +6,7 @@
         <title>TREADED</title>
         <link href="./assets/css/main.css" rel="stylesheet" />
     </head>
-    <body class="flex flex-col h-screen">
+    <body class="flex flex-col">
         <!--Layout initially serve as loading before initialization-->
         <header id="header">
             <div class="h-[70px] bg-white sticky top-0"></div>
@@ -15,12 +15,13 @@
         <nav id="promotions" class="bg-secondary">
             <div class="h-[50px]"></div>
         </nav>
-        <main id="main" class="w-full flex-1"></main>
+        <main id="main" class="w-full"></main>
         <footer id="footer"></footer>
         <!--Scripts-->
         <script src="./javascripts/constant.js" defer></script>
         <script src="./javascripts/utils.js" defer></script>
-        <script src="./javascripts/init.js" defer></script>
+        <script src="./javascripts/inits/initLayout.js" defer></script>
         <script src="./javascripts/router.js" defer></script>
+        <script src="./javascripts/inits/initCategory.js" defer></script>
     </body>
 </html>

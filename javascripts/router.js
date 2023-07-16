@@ -19,7 +19,8 @@ const handleLocation = async () => {
     const path = window.location.pathname;
     const routePath = routes[path] || routes[404];
     const html = await fetch(routePath).then((data) => data.text());
-    document.getElementById("main").innerHTML = html;
+    const toElement = htmlToElement(html);
+    document.getElementById("main").replaceWith(toElement);
 };
 
 // handle when browser back and prev buttons are clicked
